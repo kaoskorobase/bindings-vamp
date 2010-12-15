@@ -1,0 +1,30 @@
+Name:                   bindings-vamp
+Version:                0.0.0
+Synopsis:               Bindings to the Vamp audio feature extraction plugin API.
+Description:            This library provides low level bindings to the Vamp audio feature extraction plugin API (<http://www.vamp-plugins.org/>).
+License:                LGPL-3
+License-File:           LICENSE
+Category:               Sound
+Copyright:              Copyright (c) Stefan Kersten 2010
+Author:                 Stefan Kersten <sk@k-hornz.de>
+Maintainer:             Stefan Kersten <sk@k-hornz.de>
+Stability:              experimental
+Homepage:               http://space.k-hornz.de/software/bindings-vamp/
+Bug-Reports:            http://github.com/kaoskorobase/bindings-vamp/issues/
+Tested-With:            GHC == 6.12
+Build-Type:             Simple
+Cabal-Version:          >= 1.6
+
+Data-Files:
+    README.md
+
+Library
+    Exposed-Modules:    Bindings.Sound.FeatureExtraction.Vamp
+    C-Sources:          cbits/helper_functions.c
+    Build-Depends:      base >= 3 && < 5
+                      , bindings-DSL >= 1.0 && < 1.1
+    PkgConfig-Depends:  vamp >= 2
+
+Source-Repository head
+    Type:               git
+    Location:           git://github.com/kaoskorobase/bindings-vamp.git
